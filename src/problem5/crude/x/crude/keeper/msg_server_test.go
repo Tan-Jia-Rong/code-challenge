@@ -4,10 +4,11 @@ import (
 	"context"
 	"testing"
 
+	keepertest "crude/testutil/keeper"
+	"crude/x/crude/keeper"
+	"crude/x/crude/types"
+
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	keepertest "github.com/crude/testutil/keeper"
-	"github.com/crude/x/crude/keeper"
-	"github.com/crude/x/crude/types"
 )
 
 func setupMsgServer(t testing.TB) (types.MsgServer, context.Context) {

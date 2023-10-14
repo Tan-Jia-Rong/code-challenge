@@ -1,13 +1,12 @@
-package crude_test
+package blog_test
 
 import (
 	"testing"
 
-	keepertest "crude/testutil/keeper"
-	"crude/testutil/nullify"
-	"crude/x/crude"
-	"crude/x/crude/types"
-
+	keepertest "blog/testutil/keeper"
+	"blog/testutil/nullify"
+	"blog/x/blog"
+	"blog/x/blog/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -18,9 +17,9 @@ func TestGenesis(t *testing.T) {
 		// this line is used by starport scaffolding # genesis/test/state
 	}
 
-	k, ctx := keepertest.CrudeKeeper(t)
-	crude.InitGenesis(ctx, *k, genesisState)
-	got := crude.ExportGenesis(ctx, *k)
+	k, ctx := keepertest.BlogKeeper(t)
+	blog.InitGenesis(ctx, *k, genesisState)
+	got := blog.ExportGenesis(ctx, *k)
 	require.NotNil(t, got)
 
 	nullify.Fill(&genesisState)
