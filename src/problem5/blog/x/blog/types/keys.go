@@ -17,3 +17,11 @@ const (
 func KeyPrefix(p string) []byte {
 	return []byte(p)
 }
+
+const (
+	// Prefix used to uniquely identify a post in system
+	PostKey = "Post/value/"
+
+	// used to keep track of the ID of the latest post added to the store
+	PostCountKey = "Post/count/"
+)
