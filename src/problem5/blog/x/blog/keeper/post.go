@@ -99,3 +99,12 @@ func (k Keeper) SetPost(ctx sdk.Context, post types.Post) {
 	// Update Post associated with post Id
 	store.Set(GetPostIDBytes(post.Id), updatedPost)
 }
+
+// Delete existing Post
+func (k Keeper) RemovePost(ctx sdk.Context, id uint64) {
+	// Initialize Store with the Key-Value Store associated with the ctx and keyprefix
+	store := prefix.NewStore(ctx.KVStore(k.storeKey), types.KeyPrefix(types.PostKey))
+
+	// Delete Post associated with post Id
+	store.Delete(GetPostIDBytes(id))
+}
