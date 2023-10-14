@@ -47,7 +47,8 @@ message QueryShowPostRequest {
 }
 
 message QueryShowPostResponse {
-  Post post = 1;
+  // Field is expected to be a non-null value
+  Post post = 1 [(gogoproto.nullable) = false];
 }
 
 message QueryListPostRequest {
