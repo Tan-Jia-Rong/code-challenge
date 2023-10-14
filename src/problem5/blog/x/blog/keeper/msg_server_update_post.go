@@ -37,6 +37,6 @@ func (k msgServer) UpdatePost(goCtx context.Context, msg *types.MsgUpdatePost) (
 	// Update Post
 	k.SetPost(ctx, post)
 
-	// Return a response indicating the status of the operation
+	// Return a response indicating the success of the operation
 	return &types.MsgUpdatePostResponse{}, nil
 }
