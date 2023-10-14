@@ -10,6 +10,8 @@ service Msg {
   rpc UpdatePost (MsgUpdatePost) returns (MsgUpdatePostResponse);
   rpc DeletePost (MsgDeletePost) returns (MsgDeletePostResponse);
 }
+
+// C: Create Post Structure
 message MsgCreatePost {
   string creator = 1;
   string title   = 2;
@@ -20,6 +22,7 @@ message MsgCreatePostResponse {
   uint64 id = 1;
 }
 
+// U: Update Post Structure
 message MsgUpdatePost {
   string creator = 1;
   string title   = 2;
@@ -29,6 +32,7 @@ message MsgUpdatePost {
 
 message MsgUpdatePostResponse {}
 
+// D: Delete Post Structure
 message MsgDeletePost {
   string creator = 1;
   uint64 id      = 2;

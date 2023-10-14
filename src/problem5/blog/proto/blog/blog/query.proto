@@ -41,6 +41,7 @@ message QueryParamsResponse {
   Params params = 1 [(gogoproto.nullable) = false];
 }
 
+// R: Read Post Structures
 message QueryShowPostRequest {
   uint64 id = 1;
 }
