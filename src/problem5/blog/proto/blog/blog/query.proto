@@ -47,7 +47,7 @@ message QueryShowPostRequest {
 }
 
 message QueryShowPostResponse {
-  // Field is expected to be a non-null value
+  // Post is expected to be non-null
   Post post = 1 [(gogoproto.nullable) = false];
 }
 
@@ -56,7 +56,10 @@ message QueryListPostRequest {
 }
 
 message QueryListPostResponse {
-  Post                                   post       = 1;
+  // Field is allowed to hold multiple Posts which is not null
+  repeated Post post = 1 [(gogoproto.nullable) = false];
+
+  // Unsure: Request for 2 pages at a time
   cosmos.base.query.v1beta1.PageResponse pagination = 2;
 }
 
