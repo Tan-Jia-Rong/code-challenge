@@ -3,7 +3,7 @@ package crude.crude;
 
 // this line is used by starport scaffolding # proto/tx/import
 
-option go_package = "github.com/crude/x/crude/types";
+option go_package = "crude/x/crude/types";
 
 // Msg defines the Msg service.
 service Msg {

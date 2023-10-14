@@ -1,9 +1,10 @@
 package crude
 
 import (
+	"crude/x/crude/keeper"
+	"crude/x/crude/types"
+
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/crude/x/crude/keeper"
-	"github.com/crude/x/crude/types"
 )
 
 // InitGenesis initializes the module's state from a provided genesis state.

@@ -3,10 +3,11 @@ package crude_test
 import (
 	"testing"
 
-	keepertest "github.com/crude/testutil/keeper"
-	"github.com/crude/testutil/nullify"
-	"github.com/crude/x/crude"
-	"github.com/crude/x/crude/types"
+	keepertest "crude/testutil/keeper"
+	"crude/testutil/nullify"
+	"crude/x/crude"
+	"crude/x/crude/types"
+
 	"github.com/stretchr/testify/require"
 )
 

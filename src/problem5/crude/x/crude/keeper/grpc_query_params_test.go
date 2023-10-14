@@ -3,9 +3,10 @@ package keeper_test
 import (
 	"testing"
 
+	testkeeper "crude/testutil/keeper"
+	"crude/x/crude/types"
+
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	testkeeper "github.com/crude/testutil/keeper"
-	"github.com/crude/x/crude/types"
 	"github.com/stretchr/testify/require"
 )
 

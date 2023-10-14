@@ -3,7 +3,7 @@ package crude.crude;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/crude/x/crude/types";
+option go_package = "crude/x/crude/types";
 
 // Params defines the parameters for the module.
 message Params {

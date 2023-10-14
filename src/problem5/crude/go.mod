@@ -1,6 +1,6 @@
-module github.com/crude
+module crude
 
-go 1.19
+go 1.20
 
 require (
 	cosmossdk.io/api v0.3.1
@@ -206,6 +206,4 @@ require (
 	sigs.k8s.io/yaml v1.3.0 // indirect
 )
 
-replace github.com/confio/ics23/go => github.com/cosmos/cosmos-sdk/ics23/go v0.8.0
-
-replace github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
+replace github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7

@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/crude/x/crude/types"
+	"crude/x/crude/types"
 )
 
 type msgServer struct {

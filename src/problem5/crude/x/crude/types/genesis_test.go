@@ -3,7 +3,8 @@ package types_test
 import (
 	"testing"
 
-	"github.com/crude/x/crude/types"
+	"crude/x/crude/types"
+
 	"github.com/stretchr/testify/require"
 )
 

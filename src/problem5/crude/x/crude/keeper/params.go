@@ -1,8 +1,9 @@
 package keeper
 
 import (
+	"crude/x/crude/types"
+
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/crude/x/crude/types"
 )
 
 // GetParams get all parameters as types.Params

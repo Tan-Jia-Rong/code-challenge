@@ -3,8 +3,9 @@ package keeper_test
 import (
 	"testing"
 
-	testkeeper "github.com/crude/testutil/keeper"
-	"github.com/crude/x/crude/types"
+	testkeeper "crude/testutil/keeper"
+	"crude/x/crude/types"
+
 	"github.com/stretchr/testify/require"
 )
 
