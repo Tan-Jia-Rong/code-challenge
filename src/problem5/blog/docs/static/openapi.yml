@@ -15,19 +15,23 @@ paths:
             type: object
             properties:
               post:
-                type: object
-                properties:
-                  title:
-                    type: string
-                  body:
-                    type: string
-                  creator:
-                    type: string
-                  id:
-                    type: string
-                    format: uint64
-                title: message structure of Post
+                type: array
+                items:
+                  type: object
+                  properties:
+                    title:
+                      type: string
+                    body:
+                      type: string
+                    creator:
+                      type: string
+                    id:
+                      type: string
+                      format: uint64
+                  title: message structure of Post
+                title: Field is allowed to hold multiple Posts which is not null
               pagination:
+                title: 'Unsure: Request for 2 pages at a time'
                 type: object
                 properties:
                   next_key:
@@ -179,6 +183,7 @@ paths:
             type: object
             properties:
               post:
+                title: Post is expected to be non-null
                 type: object
                 properties:
                   title:
@@ -190,7 +195,6 @@ paths:
                   id:
                     type: string
                     format: uint64
-                title: message structure of Post
         default:
           description: An unexpected error response.
           schema:
@@ -46681,19 +46685,23 @@ definitions:
     type: object
     properties:
       post:
-        type: object
-        properties:
-          title:
-            type: string
-          body:
-            type: string
-          creator:
-            type: string
-          id:
-            type: string
-            format: uint64
-        title: message structure of Post
+        type: array
+        items:
+          type: object
+          properties:
+            title:
+              type: string
+            body:
+              type: string
+            creator:
+              type: string
+            id:
+              type: string
+              format: uint64
+          title: message structure of Post
+        title: Field is allowed to hold multiple Posts which is not null
       pagination:
+        title: 'Unsure: Request for 2 pages at a time'
         type: object
         properties:
           next_key:
@@ -46730,6 +46738,7 @@ definitions:
     type: object
     properties:
       post:
+        title: Post is expected to be non-null
         type: object
         properties:
           title:
@@ -46741,7 +46750,6 @@ definitions:
           id:
             type: string
             format: uint64
-        title: message structure of Post
   cosmos.base.query.v1beta1.PageRequest:
     type: object
     properties:
