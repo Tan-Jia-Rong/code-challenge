@@ -27,6 +27,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
+// C: Create Post Structure
 type MsgCreatePost struct {
 	Creator string `protobuf:"bytes,1,opt,name=creator,proto3" json:"creator,omitempty"`
 	Title   string `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
@@ -131,6 +132,7 @@ func (m *MsgCreatePostResponse) GetId() uint64 {
 	return 0
 }
 
+// U: Update Post Structure
 type MsgUpdatePost struct {
 	Creator string `protobuf:"bytes,1,opt,name=creator,proto3" json:"creator,omitempty"`
 	Title   string `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
@@ -235,6 +237,7 @@ func (m *MsgUpdatePostResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_MsgUpdatePostResponse proto.InternalMessageInfo
 
+// D: Delete Post Structure
 type MsgDeletePost struct {
 	Creator string `protobuf:"bytes,1,opt,name=creator,proto3" json:"creator,omitempty"`
 	Id      uint64 `protobuf:"varint,2,opt,name=id,proto3" json:"id,omitempty"`
