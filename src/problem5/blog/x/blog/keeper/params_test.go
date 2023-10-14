@@ -3,14 +3,13 @@ package keeper_test
 import (
 	"testing"
 
-	testkeeper "crude/testutil/keeper"
-	"crude/x/crude/types"
-
+	testkeeper "blog/testutil/keeper"
+	"blog/x/blog/types"
 	"github.com/stretchr/testify/require"
 )
 
 func TestGetParams(t *testing.T) {
-	k, ctx := testkeeper.CrudeKeeper(t)
+	k, ctx := testkeeper.BlogKeeper(t)
 	params := types.DefaultParams()
 
 	k.SetParams(ctx, params)
