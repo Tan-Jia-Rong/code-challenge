@@ -68,7 +68,7 @@ cd /Users/{your computer name}/go/bin
 
 ### Problem 6: Cosmos Architecture
 
-1. Diagrams can be found in the `src/problem6/diagrams` directory.
+1. Diagrams can be found in the [`src/problem6/diagrams`](src/problem6/diagrams) directory.
 
 2. Documentation can be found in the [`src/problem6/README.md`](src/problem6/README.md) file.
 
