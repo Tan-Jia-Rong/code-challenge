@@ -24,11 +24,11 @@ Blockchain has to be updated from v0 to v1. which is not supported by Ignite CLI
 Upon following the migration steps outlined in the documents and updating to v0.27, there seems to be some missing dependencies and import statements. ```[see branches: migrate]```
 
 **CRUD Commands:**
-1. create-post: Creates a new post with a title and body `CRUD: C`
-2. show-post: Show the details of an existing post associated with the given post id `CRUD: R`
-3. list-post: Shows details of all existing posts `CRUD: R`
-4. update-post: Updates an existing post `CRUD: U`
-5. delete-post: Deletes an existing post `CRUD: D`
+1. `create-post`: Creates a new post with a title and body `CRUD: C`
+2. `show-post`: Show the details of an existing post associated with the given post id `CRUD: R`
+3. `list-post`: Shows details of all existing posts `CRUD: R`
+4. `update-post`: Updates an existing post `CRUD: U`
+5. `delete-post`: Deletes an existing post `CRUD: D`
 
 Steps to run to start the server:
 ```shell
