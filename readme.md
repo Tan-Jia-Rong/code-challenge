@@ -19,7 +19,7 @@ go run sum-to-n.go
 ### Problem 6
 
 1. Diagrams could be found in ```src/problem6/diagrams```
-<br>
+
 2. Documentations can be found in ```src/problem6/README.md```
-<br>
+
 3. Shortcomings and potential improvements can be found in ```src/problem6/README.md``` under **Section 2**
