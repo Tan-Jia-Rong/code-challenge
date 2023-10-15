@@ -113,7 +113,7 @@ if found {
 
 #### Shortcoming 4: Duplicate Function Declarations
 
-In the ```market.go``` file, the same function **(RemoveMarket)** is defined more than once. This redundancy could lead to confusion and should have triggered a compilation error for proper code maintenance and clarity.
+In the ```market.go``` file, the same function **(RemoveMarket)** is defined more than once. This redundancy could lead to confusion and should have triggered a compilation error.
 
 #### Potential Improvement 1: Refactor code to improve clarity
 
