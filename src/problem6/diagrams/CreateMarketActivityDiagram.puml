@@ -9,7 +9,8 @@ if () then ([syntax is valid])
         :Generate market attributes;
         :Error checking;
         if () then ([passes validation])
-            ::Update database;
+            :Update database;
+            :Generate & Broadcast transaction;
         else ([fails validation])
             :Display error message;
             stop
