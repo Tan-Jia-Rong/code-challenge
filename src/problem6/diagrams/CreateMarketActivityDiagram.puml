@@ -1,0 +1,26 @@
+@startuml
+start
+:User executes create-market command;
+
+if () then ([syntax is valid])
+    :Parse parameters and get ClientTxContext;
+    if () then ([ClientTxContext exists])
+        :Get parameters from ClientTxContext;
+        :Generate market attributes;
+        :Error checking;
+        if () then ([passes validation])
+            :Update database;
+            :Generate & Broadcast transaction;
+        else ([fails validation])
+            :Display error message;
+            stop
+        endif
+        :Display success message;
+    else ([else])
+        :Display error message;
+    endif
+else ([else])
+    :Display usage syntax;
+endif
+stop
+@enduml

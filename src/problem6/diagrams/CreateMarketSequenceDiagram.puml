@@ -1,0 +1,44 @@
+@startuml
+!include style.puml
+
+Actor User as user USER_COLOR
+Participant ":Command" as x X_COLOR
+Participant ":Client" as z Z_COLOR
+Participant ":Keeper" as y Y_COLOR
+
+user -[USER_COLOR]> x : "create-market [...params]"
+activate x X_COLOR
+
+x -[X_COLOR]> z : GetClientTxContext(cmd)
+activate z Z_COLOR
+
+z --[Z_COLOR]> x : clientCtx, err
+deactivate z Z_COLOR
+
+x -[X_COLOR]> y : CreateMarket(clientCtx, [...params])
+activate y Y_COLOR
+
+y -[Y_COLOR]> y : GetParams(clientCtx)
+activate y Y_COLOR
+
+y -[Y_COLOR]-> y
+deactivate y Y_COLOR
+
+y -[Y_COLOR]> y : GenerateMarketAttributes(...params)
+activate y Y_COLOR
+
+y -[Y_COLOR]-> y : market, err
+deactivate y Y_COLOR
+
+y -[Y_COLOR]> y : SetCreatedMarket(clientCtx, market)
+activate y Y_COLOR
+
+y -[Y_COLOR]-> y
+deactivate y Y_COLOR
+
+y --[Y_COLOR]> x : market, err
+deactivate y
+
+x--[X_COLOR]> user : market, err
+deactivate x
+@enduml
