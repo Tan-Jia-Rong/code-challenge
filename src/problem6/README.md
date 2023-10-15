@@ -121,6 +121,7 @@ In the ```market.go``` file, the same function **(RemoveMarket)** is defined mor
 Consider refactoring the functions in ```market.go``` file to modularize the error-checking logic.
 
 For example,
+
 Currently, the ```CreateMarket``` functions contains both the logic of creating a market and extensive error-checking, which reduces code readability.
 
 By seperating error-checking into seperate functions, we can improve
