@@ -1,6 +1,7 @@
 # Switcheo Code Challenge
 
 Switcheo Code Challenge for Backend Engineer Internship Position
+
 Applicant: Tan Jia Rong
 
 ### Problem 4: Three ways to sum to n
