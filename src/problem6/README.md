@@ -61,11 +61,14 @@ Output:
 ### 1.3 Testing
 Tests are essential to ensure the functionality and integrity of the module. Hence, examples should be provided on how testing could be done
 
+Perhaps some relevant test suites and frameworks used could also be mentioned.
+
 ### 2. Shortcomings and Improvements:
 
 #### Shortcoming 1: Documentation
 
 The Market module lacks a comprehensive and well-structured documentation.
+
 Improvement needs to be made to the documentation by providing clearer explanations, examples, and use cases to help developers understand how to use the module effectively.
 
 Additionally, in each file, it would be good to have a high level overview of what the file is about.
@@ -108,9 +111,27 @@ if found {
 }
 ```
 
+#### Shortcoming 4: Duplicate Function Declarations
+
+In the ```market.go``` file, the same function **(RemoveMarket)** is defined more than once. This redundancy could lead to confusion and should have triggered a compilation error for proper code maintenance and clarity.
+
+#### Potential Improvement 1: Refactor code to improve clarity
 
 
-### 3. References: Provide links to relevant documentation, frameworks, and dependencies.
+Consider refactoring the functions in ```market.go``` file to modularize the error-checking logic.
+
+For example,
+Currently, the ```CreateMarket``` functions contains both the logic of creating a market and extensive error-checking, which reduces code readability.
+
+By seperating error-checking into seperate functions, we can improve
+1. **Clarity**: By abstracting the error-checking logic away from the main function, it makes the primary logic easier to follow and understand.
+2. **Reusability**: The error-checking function could be reused elsewhere in the codebase if required, promoting the DRY principle.
+3. **Maintainability**: Ease of maintenance as everything can be updated or improved in a single place
+
+### 3. Acknowledgements
+This module is forked from [Switcheo Code Challenge](https://github.com/Switcheo/code-challenge).
+
+### 4. References:
 - Cosmos SDK Module
     - Folder Structure - https://docs.cosmos.network/main/building-modules/structure
     - Transaction CLI - https://docs.cosmos.network/main/core/cli#transaction-commands
@@ -121,3 +142,4 @@ if found {
     - KV Store Concept - https://www.influxdata.com/key-value-database/
     - Query CLI - https://docs.cosmos.network/main/core/cli#query-commands
     - Module Migration - https://docs.cosmos.network/main/building-modules/upgrade
+
